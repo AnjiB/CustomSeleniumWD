@@ -1,0 +1,16 @@
+package com.anji.sel.rest.create;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class CreateSessionResponse {
+
+	@JsonProperty("value")
+	private Value value;
+}
