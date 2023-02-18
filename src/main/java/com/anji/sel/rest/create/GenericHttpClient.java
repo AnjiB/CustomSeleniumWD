@@ -10,9 +10,9 @@ public class GenericHttpClient extends RestAssuredApiServiceImpl {
 		super(basePath);
 	}
 	
-	public ApiResponseImpl<String> postReqest(Object body, String baseUrl) throws Exception {
+	public ApiResponseImpl<String> postReqest(Object body, String pathUrl) throws Exception {
 		
-		RequestBuilder builder = RequestBuilder.builder().pathUrl(baseUrl)
+		RequestBuilder builder = RequestBuilder.builder().pathUrl(pathUrl)
 				.requestObject(body).build();
 		
 		return new ApiResponseImpl<String>(post(builder), String.class);
